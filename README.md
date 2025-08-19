@@ -1,7 +1,8 @@
 # Михаил Смирнов  
 **20 лет**  
 
-Резюме-docs - https://docs.google.com/document/d/1ao3taoIwhTjBZXFfj0OWTqVvAEjz3ZJSb5zUZsINh10/edit?usp=sharing
+**Резюме-docs - https://docs.google.com/document/d/1ao3taoIwhTjBZXFfj0OWTqVvAEjz3ZJSb5zUZsINh10/edit?usp=sharing**
+
 Сайт-резюме - https://resume-website-github-io.vercel.app
 ---
 
