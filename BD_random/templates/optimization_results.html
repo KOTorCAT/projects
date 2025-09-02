@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Результаты оптимизации - Employee Directory System{% endblock %}
+
+{% block header_title %}⚡ Результаты оптимизации{% endblock %}
+{% block header_subtitle %}Сравнение производительности до и после оптимизации{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <div style="margin-bottom: 20px;">
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">← На главную</a>
+    </div>
+
+    <div class="stats-cards">
+        <div class="stat-card">
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-info">
+                <h3>До оптимизации</h3>
+                <p class="stat-number">{{ "%.3f"|format(time_before) }} сек</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-info">
+                <h3>После оптимизации</h3>
+                <p class="stat-number">{{ "%.3f"|format(time_after) }} сек</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📈</div>
+            <div class="stat-info">
+                <h3>Ускорение</h3>
+                <p class="stat-number">{{ "%.1f"|format(improvement) }}%</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <h3 style="color: #2c3e50; margin-bottom: 15px;">Результаты оптимизации</h3>
+        <p style="color: #7f8c8d; line-height: 1.6;">
+            Запрос выполняется на <strong>{{ "%.1f"|format(improvement) }}%</strong> быстрее после создания индексов.<br>
+            Время выполнения уменьшилось с <strong>{{ "%.3f"|format(time_before) }} секунд</strong> до <strong>{{ "%.3f"|format(time_after) }} секунд</strong>.
+        </p>
+        
+        <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 10px;">
+            <p style="margin: 0; color: #495057; font-size: 14px;">
+                <strong>Найдено записей:</strong> {{ count_after }}<br>
+                <strong>Индекс создан:</strong> idx_gender_surname (gender, substr(full_name, 1, 1))
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}  

@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Система управления персоналом{% endblock %}
+
+{% block header_title %}УЧЕТ СОТРУДНИКОВ{% endblock %}
+{% block header_subtitle %}Система управления базой данных{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <div class="stats-cards">
+        <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-info">
+                <h3>Всего сотрудников</h3>
+                <p class="stat-number">{{ total_employees }}</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">♂</div>
+            <div class="stat-info">
+                <h3>Мужчины</h3>
+                <p class="stat-number">{{ male_count }}</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">♀</div>
+            <div class="stat-info">
+                <h3>Женщины</h3>
+                <p class="stat-number">{{ female_count }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-cards">
+        <div class="action-card">
+            <h3>Список сотрудников</h3>
+            <p>Полный перечень сотрудников компании с детальной информацией</p>
+            <a href="{{ url_for('employees') }}" class="btn btn-primary">Просмотреть</a>
+        </div>
+
+        <div class="action-card">
+            <h3>Добавить сотрудника</h3>
+            <p>Внесение нового сотрудника в корпоративную базу данных</p>
+            <a href="{{ url_for('add_employee') }}" class="btn btn-secondary">Добавить</a>
+        </div>
+
+        <div class="action-card">
+            <h3>Генерация данных</h3>
+            <p>Создание тестовых данных для демонстрации работы системы</p>
+            <form action="{{ url_for('generate_data') }}" method="post" class="generate-form">
+                <input type="text" name="count" value="100" class="input-number" 
+                    placeholder="Количество" id="countInput" style="width: 100px;"
+                    pattern="[0-9]*" inputmode="numeric">
+                <button type="submit" class="btn btn-warning">Создать</button>
+            </form>
+        </div>
+
+        <div class="action-card">
+            <h3>Анализ данных</h3>
+            <p>Статистический анализ и фильтрация сотрудников по критериям</p>
+            <a href="{{ url_for('query_f_surnames') }}" class="btn btn-info">Анализировать</a>
+        </div>
+
+        <div class="action-card">
+            <h3>Оптимизация</h3>
+            <p>Повышение производительности базы данных через индексацию</p>
+            <form action="{{ url_for('optimize') }}" method="post">
+                <button type="submit" class="btn btn-success">Оптимизировать</button>
+            </form>
+        </div>
+
+        <div class="action-card">
+            <h3>Экспорт данных</h3>
+            <p>Выгрузка информации в формате CSV для внешнего использования</p>
+            <a href="{{ url_for('export_csv') }}" class="btn btn-export">Экспортировать</a>
+        </div>
+
+        <div class="action-card danger">
+            <h3>Очистка базы</h3>
+            <p>Полное удаление всех данных из системы. Действие необратимо</p>
+            <form action="{{ url_for('clear_database') }}" method="post" 
+                  onsubmit="return confirm('ВНИМАНИЕ: Все данные будут безвозвратно удалены. Продолжить?')">
+                <button type="submit" class="btn btn-danger">Очистить</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Обновление статистики
+    async function updateStats() {
+        try {
+            const response = await fetch('/api/stats');
+            const data = await response.json();
+            
+            document.querySelectorAll('.stat-number')[0].textContent = data.total_employees;
+            document.querySelectorAll('.stat-number')[1].textContent = data.male_count;
+            document.querySelectorAll('.stat-number')[2].textContent = data.female_count;
+        } catch (error) {
+            console.error('Ошибка обновления статистики:', error);
+        }
+    }
+
+    // Фокус на поле ввода при загрузке
+    document.addEventListener('DOMContentLoaded', function() {
+        const countInput = document.getElementById('countInput');
+        if (countInput) {
+            countInput.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+            
+            // Разблокируем поле ввода
+            countInput.removeAttribute('readonly');
+            countInput.removeAttribute('disabled');
+        }
+    });
+
+    // Обновляем статистику каждые 30 секунд
+    setInterval(updateStats, 30000);
+    
+    // Первоначальное обновление
+    updateStats();
+</script>
+{% endblock %}

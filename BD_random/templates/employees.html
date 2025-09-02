@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Список сотрудников - Employee Directory System{% endblock %}
+
+{% block header_title %}👥 Список сотрудников{% endblock %}
+{% block header_subtitle %}Все сотрудники в базе данных{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <div style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">← На главную</a>
+        <a href="{{ url_for('add_employee') }}" class="btn btn-primary">➕ Добавить сотрудника</a>
+        <a href="{{ url_for('export_csv') }}" class="btn btn-export">📤 Экспорт CSV</a>
+    </div>
+
+    <div style="background: white; border-radius: 15px; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <thead>
+                <tr style="border-bottom: 2px solid #667eea;">
+                    <th style="padding: 15px; text-align: left; font-weight: 600;">ФИО</th>
+                    <th style="padding: 15px; text-align: left; font-weight: 600;">Дата рождения</th>
+                    <th style="padding: 15px; text-align: left; font-weight: 600;">Пол</th>
+                    <th style="padding: 15px; text-align: left; font-weight: 600;">Возраст</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 15px;">{{ employee.full_name }}</td>
+                    <td style="padding: 15px;">{{ employee.birth_date }}</td>
+                    <td style="padding: 15px;">{{ employee.gender }}</td>
+                    <td style="padding: 15px;">{{ employee.age }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {% if total_pages > 1 %}
+        <div style="margin-top: 20px; text-align: center; padding: 20px;">
+            {% if page > 1 %}
+            <a href="{{ url_for('employees', page=page-1) }}" class="btn btn-secondary">← Назад</a>
+            {% endif %}
+            
+            <span style="margin: 0 15px; font-weight: 500;">
+                Страница {{ page }} из {{ total_pages }} (Всего: {{ total }})
+            </span>
+            
+            {% if page < total_pages %}
+            <a href="{{ url_for('employees', page=page+1) }}" class="btn btn-secondary">Вперед →</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
