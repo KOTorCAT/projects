@@ -1,79 +1,120 @@
-# Михаил Смирнов
+<h1 align="center">
+  <span style="color: #6c5ce7;">Михаил Смирнов</span>
+</h1>
 
-**Python & C Developer** | Студент 3 курса  
-📍 Санкт-Петербург • 20 лет
+<h3 align="center">
+  <span style="color: #a29bfe;">Python & C Developer | Студент 3 курса</span>
+</h3>
+
+<p align="center">
+  <span style="color: #fd79a8;">📍 Санкт-Петербург • 20 лет</span>
+</p>
+
+<div align="center">
+  <a href="mailto:mikhail.b.smirnov@mail.ru" style="color: #fd79a8; text-decoration: none; margin: 0 10px;">
+    📧 mikhail.b.smirnov@mail.ru
+  </a>
+  •
+  <a href="https://t.me/man_who_eats_cake" style="color: #fd79a8; text-decoration: none; margin: 0 10px;">
+    📱 @man_who_eats_cake
+  </a>
+  •
+  <a href="https://github.com/KOTorCAT/projects" style="color: #fd79a8; text-decoration: none; margin: 0 10px;">
+    💻 GitHub
+  </a>
+  •
+  <a href="https://resume-website-github-io.vercel.app" style="color: #fd79a8; text-decoration: none; margin: 0 10px;">
+    🌐 Портфолио
+  </a>
+</div>
 
 ---
 
-## Контакты
-
-📧 **Email:** [mikhail.b.smirnov@mail.ru](mailto:mikhail.b.smirnov@mail.ru)  
-📱 **Telegram:** [@man_who_eats_cake](https://t.me/man_who_eats_cake)  
-💻 **GitHub:** [github.com/KOTorCAT](https://github.com/KOTorCAT/projects)  
-🌐 **Портфолио:** [resume-website](https://resume-website-github-io.vercel.app/)
-
----
-
-## 🎯 Цель
+## 🎯 <span style="color: #6c5ce7;">Цель</span>
 
 Студент-разработчик, углубленно изучающий **Python** и **C**. Имею опыт создания desktop-приложений, веб-решений и работы с алгоритмами. Ищу стажировку/работу, где смогу расти как профессионал.
 
 ---
 
-## 🛠 Технологии
+## 🛠 <span style="color: #6c5ce7;">Технологии</span>
 
-**Языки:** Python, C, JavaScript, HTML/CSS, SQL  
-**Фреймворки:** Qt5, Flask, NumPy, Numba, SQLAlchemy  
-**Инструменты:** Git, Linux, Bash, Make, Gcov, Check  
-**Методологии:** Командная разработка, код-ревью, юнит-тестирование
+**Языки:** 
+<span style="color: #a29bfe;">Python</span>, 
+<span style="color: #a29bfe;">C</span>, 
+<span style="color: #a29bfe;">JavaScript</span>, 
+<span style="color: #a29bfe;">HTML/CSS</span>, 
+<span style="color: #a29bfe;">SQL</span>
 
----
+**Фреймворки:** 
+<span style="color: #a29bfe;">Qt5</span>, 
+<span style="color: #a29bfe;">Flask</span>, 
+<span style="color: #a29bfe;">NumPy</span>, 
+<span style="color: #a29bfe;">Numba</span>, 
+<span style="color: #a29bfe;">SQLAlchemy</span>
 
-## 💻 Проекты
-
-### 🧮 Математическая библиотека на C
-- Полный цикл операций с матрицами
-- Покрытие тестами >80% (Check)
-- Система сборки на Makefile
-
-### 🎨 Генератор фракталов Жюлиа
-- High-performance приложение на Python
-- Визуализация с Qt5 и NumPy
-- Параллельные вычисления
-
-### 👥 Сканер чеков с разделением расходов
-- Веб-приложение на Python/JS
-- Парсинг чеков и расчет долей
-- Командная разработка
-
-### 📊 Справочник сотрудников
-- Full-stack на Flask + SQLite
-- CRUD, пагинация, импорт/экспорт
-- Оптимизация БД (+80% производительности)
+**Инструменты:** 
+<span style="color: #a29bfe;">Git</span>, 
+<span style="color: #a29bfe;">Linux</span>, 
+<span style="color: #a29bfe;">Bash</span>, 
+<span style="color: #a29bfe;">Make</span>, 
+<span style="color: #a29bfe;">Gcov</span>, 
+<span style="color: #a29bfe;">Check</span>
 
 ---
 
-## 🎓 Образование
+## 💻 <span style="color: #6c5ce7;">Проекты</span>
+
+### 🧮 **Математическая библиотека на C**
+> Полный цикл операций с матрицами • Покрытие тестами >80% • Makefile
+
+### 🎨 **Генератор фракталов Жюлиа** 
+> High-performance приложение • Python + Qt5 + NumPy • Параллельные вычисления
+
+### 👥 **Сканер чеков с разделением расходов**
+> Веб-приложение • Python/JS • Парсинг чеков • Командная разработка
+
+### 📊 **Справочник сотрудников**
+> Full-stack • Flask + SQLite • CRUD + оптимизация БД (+80%)
+
+---
+
+## 🎓 <span style="color: #6c5ce7;">Образование</span>
 
 **РГПУ им. Герцена**  
-Бакалавриат • Информатика и вычислительная техника  
-2023–2027 • 3 курс  
-Профиль: Технологии разработки ПО и обработки больших данных
+*2023–2027 • 3 курс*  
+Информатика и вычислительная техника  
+Технологии разработки ПО и обработки больших данных
 
 **Школа 21 (Сбер)**  
-Интенсивная программа обучения программированию  
-Алгоритмическая подготовка на C, проектная разработка
+Интенсивная программа обучения  
+Алгоритмическая подготовка на C • Проектная разработка
 
 ---
 
-## 🌟 Качества
+## 🌟 <span style="color: #6c5ce7;">Качества</span>
 
-- Аналитическое мышление
-- Оптимизация кода и алгоритмов
-- Командная работа и код-ревью
-- Непрерывное обучение
-- Английский B1
+- <span style="color: #a29bfe;">Аналитическое мышление</span>
+- <span style="color: #a29bfe;">Оптимизация кода и алгоритмов</span>
+- <span style="color: #a29bfe;">Командная работа и код-ревью</span>
+- <span style="color: #a29bfe;">Непрерывное обучение</span>
+- <span style="color: #a29bfe;">Английский B1</span>
 
 ---
 
-> 📧 [mikhail.b.smirnov@mail.ru](mailto:mikhail.b.smirnov@mail.ru) • 📱 [@man_who_eats_cake](https://t.me/man_who_eats_cake)
+<div align="center">
+  <p style="color: #6c5ce7;">
+    <strong>🚀 Готов к новым интересным задачам</strong>
+  </p>
+  
+  <a href="mailto:mikhail.b.smirnov@mail.ru" style="color: #fd79a8; text-decoration: none; margin: 0 10px;">
+    📧 Написать
+  </a>
+  •
+  <a href="https://t.me/man_who_eats_cake" style="color: #fd79a8; text-decoration: none; margin: 0 10px;">
+    💬 Telegram
+  </a>
+  •
+  <a href="https://github.com/KOTorCAT/projects" style="color: #fd79a8; text-decoration: none; margin: 0 10px;">
+    👨‍💻 Проекты
+  </a>
+</div>
