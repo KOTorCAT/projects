@@ -1,0 +1,12 @@
+BrickGame Tetris Documentation
+=============================
+Build date: Fri Sep 19 14:57:15 MSK 2025
+Version: 1.0
+Target: tetris
+
+Available make targets:
+- all: Build the main executable
+- test: Run unit tests
+- install: Install to system
+- clean: Remove build artifacts
+- dist: Create distribution package
